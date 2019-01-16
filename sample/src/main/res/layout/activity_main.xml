@@ -16,4 +16,10 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"/>
 
+    <com.github.grishberg.consoleview.console.ConsoleView
+            android:background="#EEEEEE"
+            android:layout_width="match_parent"
+            android:layout_height="100dp" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
 </android.support.constraint.ConstraintLayout>

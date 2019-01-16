@@ -3,6 +3,9 @@ package com.github.grishberg.consoleview
 import com.github.grishberg.consoleview.console.Console
 import com.github.grishberg.consoleview.console.ConsoleProxy
 
+/**
+ * Logger interface.
+ */
 interface Logger {
     fun d(tag: String, message: String)
 }

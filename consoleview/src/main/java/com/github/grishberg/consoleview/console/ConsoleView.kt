@@ -1,6 +1,7 @@
 package com.github.grishberg.consoleview.console
 
 import android.content.Context
+import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import com.github.grishberg.consoleview.MessagesAdapter
@@ -35,10 +36,13 @@ class ConsoleView : RecyclerView, Console {
     ) {
         consoleProxy = console
         setAdapter(adapter)
+        val layoutManager = LinearLayoutManager(context, RecyclerView.VERTICAL, false)
+        setLayoutManager(layoutManager)
     }
 
     override fun addString(tag: String, message: String) {
         adapter.addMessage(tag, message)
+        scrollToPosition(adapter.itemCount - 1)
     }
 
     override fun onAttachedToWindow() {

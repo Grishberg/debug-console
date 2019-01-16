@@ -1,6 +1,7 @@
 package com.github.grishberg.consoleview
 
 import android.widget.TextView
+import com.github.grishberg.consoleview.console.Console
 
 class MessagesItem(
     private val tag: String,
@@ -12,5 +13,9 @@ class MessagesItem(
 
     fun writeMessage(messageView: TextView) {
         messageView.text = message
+    }
+
+    fun delegateToConsole(console: Console) {
+        console.addString(tag, message)
     }
 }
